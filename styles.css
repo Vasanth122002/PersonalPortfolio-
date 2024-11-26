@@ -5,11 +5,11 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   line-height: 1.6;
   background-color: #f4f4f9;
   color: #333;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 header {
@@ -23,6 +23,7 @@ header {
 
 header nav ul {
   list-style: none;
+  padding: 0;
 }
 
 header nav ul li {
@@ -52,17 +53,40 @@ section h2 {
   font-size: 2em;
 }
 
-.skills-container span {
-  display: inline-block;
-  margin: 5px;
-  padding: 10px;
-  background: #e1e1e1;
-  border-radius: 5px;
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.project,
-.experience-item {
+.skills-container span {
+  padding: 8px 16px;
+  background: #e1e1e1;
+  border-radius: 15px;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.skills-container span:hover {
+  background: #555;
+  color: #fff;
+}
+
+.project {
   margin-bottom: 15px;
+  padding: 20px;
+  background: #f4f4f9;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.project:hover {
+  transform: scale(1.05);
+  background: #e1e1e1;
+}
+
+.project h3 {
+  margin-bottom: 10px;
 }
 
 form {
@@ -76,6 +100,7 @@ form textarea {
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 5px;
+  font-size: 1rem;
 }
 
 form button {
@@ -84,6 +109,7 @@ form button {
   color: #fff;
   border: none;
   cursor: pointer;
+  font-size: 1rem;
 }
 
 body.dark-mode {
