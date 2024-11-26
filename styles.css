@@ -1,65 +1,48 @@
 
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   background-color: #f4f4f9;
   color: #333;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
-
 
 header {
   background: #333;
   color: #fff;
-  padding: 20px;
+  padding: 10px 0;
   text-align: center;
   position: sticky;
   top: 0;
-  z-index: 10;
-}
-
-header h1 {
-  font-size: 2.5em;
 }
 
 header nav ul {
   list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+}
+
+header nav ul li {
+  display: inline;
+  margin: 0 10px;
 }
 
 header nav a {
   color: #fff;
   text-decoration: none;
-  font-size: 1.1em;
 }
 
 header #toggle-mode {
   cursor: pointer;
   background: none;
   border: none;
-  font-size: 1.5em;
   color: #fff;
-  transition: transform 0.2s;
 }
-
-header #toggle-mode:hover {
-  transform: scale(1.1);
-}
-
-
-main {
-  padding: 20px;
-}
-
 
 section {
   padding: 20px;
@@ -67,8 +50,8 @@ section {
 }
 
 section h2 {
-  font-size: 2em;
   margin-bottom: 10px;
+  font-size: 2em;
 }
 
 .skills-container span {
@@ -77,13 +60,12 @@ section h2 {
   padding: 10px;
   background: #e1e1e1;
   border-radius: 5px;
-  font-weight: bold;
 }
 
-.project, .experience-item {
+.project,
+.experience-item {
   margin-bottom: 15px;
 }
-
 
 form {
   display: flex;
@@ -106,11 +88,6 @@ form button {
   cursor: pointer;
 }
 
-form button:hover {
-  background-color: #555;
-}
-
-
 body.dark-mode {
   background-color: #222;
   color: #f4f4f9;
@@ -126,22 +103,4 @@ body.dark-mode .skills-container span {
 
 body.dark-mode form button {
   background: #555;
-}
-
-
-@media (max-width: 768px) {
-  header nav ul {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  section {
-    padding: 15px;
-  }
-
-  .skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
 }
